@@ -2,6 +2,7 @@
 *.d
 
 build
+dist
 
 # Object files
 *.o
