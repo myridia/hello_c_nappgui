@@ -33,7 +33,7 @@ jobs:
           cd nappgui_src
           cmake -S . -B build -DNAPPGUI_DEMO=NO -DCMAKE_BUILD_TYPE=Release
           cmake --build build -j 4
-          cmake --install build --config Release --prefix /usr/local/nappgui
+          sudo cmake --install build --config Release --prefix /usr/local/nappgui
        
       #- name: Checkout repository
       #  uses: actions/checkout@v4
