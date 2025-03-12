@@ -35,13 +35,14 @@ jobs:
          run: |
            cmake -G Xcode -S . -B build -DCMAKE_INSTALL_PREFIX=/usr/local/nappgui
            cmake --build build --config Release
-           tar -czf hello_c_nappgui.app.tar.gz build/Release/bin/ ./hello_c_nappgui.app
+           ls  build/Release/bin/
+           #tar -czf hello_c_nappgui.app.tar.gz build/Release/bin/ ./hello_c_nappgui.app
 
-       - name: Upload Macos Intel Binary to release
-         uses: svenstaro/upload-release-action@v2
-         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: 'hello_c_nappgui.app.tar.gz'
-          tag: ${{ github.ref }}
-          overwrite: true
-          file_glob: true   
+       #- name: Upload Macos Intel Binary to release
+       #  uses: svenstaro/upload-release-action@v2
+       #  with:
+       #   repo_token: ${{ secrets.GITHUB_TOKEN }}
+       #   file: 'hello_c_nappgui.app.tar.gz'
+       #   tag: ${{ github.ref }}
+       #   overwrite: true
+       #   file_glob: true   
