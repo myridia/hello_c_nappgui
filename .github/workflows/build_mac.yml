@@ -37,6 +37,8 @@ jobs:
            cmake --build build --config Release
            ls  build/Release/bin/
            ls build/Release/bin/hello_c_nappgui.app
+           cd build/Release/bin/
+           hdiutil create -volname "hello_c_nappgui" -srcfolder "hello_c_nappgui.app" -ov -format UDZO "hello_c_nappgui.dmg"
            #tar -czf hello_c_nappgui.app.tar.gz build/Release/bin/ ./hello_c_nappgui.app
 
        #- name: Upload Macos Intel Binary to release
