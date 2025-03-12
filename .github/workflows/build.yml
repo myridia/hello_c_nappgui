@@ -40,7 +40,7 @@ jobs:
 
       - name: build hello_c_gui
         run: |
-        ./build.sh 
+         ./build.sh 
         
 
         
