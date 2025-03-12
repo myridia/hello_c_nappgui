@@ -35,7 +35,7 @@ jobs:
          run: |
            cmake -G Xcode -S . -B build -DCMAKE_INSTALL_PREFIX=/usr/local/nappgui
            cmake --build build --config Debug
-           #cp build/Release/bin/hello_c_nappgui build/Release/bin/hello_c_nappgui_mac
+           cp build/Release/bin/hello_c_nappgui hello_c_nappgui_mac
 
        #- name: Upload Macos Intel Binary to release
        #  uses: svenstaro/upload-release-action@v2
