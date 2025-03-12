@@ -1,6 +1,3 @@
-#nap_desktop_app(HelloWorld "osapp" NRC_NONE)
-#set_target_properties(HelloWorld PROPERTIES FOLDER "demo")
-
 cmake_minimum_required(VERSION 3.5)
 project(hello_c_nappgui)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
@@ -24,8 +21,8 @@ message (STATUS "GNU GENERAL PUBLIC License")
 message(STATUS ${CMAKE_CXX_COMPILER_ID})
 message (STATUS "---------------------------------------------")
 
-nap_check_webview_support()
-nap_build_opt_init()
+#nap_check_webview_support()
+#nap_build_opt_init()
 nap_config_compiler()
 nap_project_desktop_app(hello_c_nappgui dist/)
 
