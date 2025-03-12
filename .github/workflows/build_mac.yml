@@ -34,14 +34,14 @@ jobs:
        - name: build hello_c_gui
          run: |
            cmake -G Xcode -S . -B build -DCMAKE_INSTALL_PREFIX=/usr/local/nappgui
-           cmake --build build --config Debug
-           cp build/Release/bin/hello_c_nappgui build/Release/bin/hello_c_nappgui_mac
+           #cmake --build build --config Debug
+           #cp build/Release/bin/hello_c_nappgui build/Release/bin/hello_c_nappgui_mac
 
-       - name: Upload Macos Intel Binary to release
-         uses: svenstaro/upload-release-action@v2
-         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: 'build/Release/bin/hello_c_nappgui_mac'
-          tag: ${{ github.ref }}
-          overwrite: true
-          file_glob: true   
+       #- name: Upload Macos Intel Binary to release
+       #  uses: svenstaro/upload-release-action@v2
+       #  with:
+       #   repo_token: ${{ secrets.GITHUB_TOKEN }}
+       #   file: 'build/Release/bin/hello_c_nappgui_mac'
+       #   tag: ${{ github.ref }}
+       #   overwrite: true
+       #   file_glob: true   
