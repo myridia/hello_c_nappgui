@@ -40,7 +40,8 @@ jobs:
 
       - name: build hello_c_gui
         run: |
-         ./build.sh 
+         cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local/nappgui
+         cmake --build build
         
 
         
