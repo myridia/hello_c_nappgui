@@ -26,7 +26,7 @@ jobs:
           cmake --version 
           cmake -G Xcode -S . -B build -DNAPPGUI_DEMO=NO
           cmake --build build --config Release -j 4
-          cmake --install build --config Release --prefix /usr/local/nappgui
+          sudo cmake --install build --config Release --prefix /usr/local/nappgui
           
        # name: Checkout repository
        #  uses: actions/checkout@v4
