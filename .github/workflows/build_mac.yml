@@ -36,6 +36,7 @@ jobs:
            cmake -G Xcode -S . -B build -DCMAKE_INSTALL_PREFIX=/usr/local/nappgui
            cmake --build build --config Release
            ls  build/Release/bin/
+           ls build/Release/bin/hello_c_nappgui.app
            #tar -czf hello_c_nappgui.app.tar.gz build/Release/bin/ ./hello_c_nappgui.app
 
        #- name: Upload Macos Intel Binary to release
