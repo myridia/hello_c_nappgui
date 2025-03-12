@@ -17,7 +17,7 @@ permissions:
 jobs:
   # Single deploy job since we're just deploying
   build:
-    if: github.repository_owner == 'myridia'
+    if: github.repository_owner == 'myridiax'
     runs-on: ubuntu-22.04  
     steps:
       - name: install dependencies
