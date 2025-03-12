@@ -35,8 +35,13 @@ jobs:
           cmake --build build -j 4
           sudo cmake --install build --config Release --prefix /usr/local/nappgui
        
-      #- name: Checkout repository
-      #  uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: build hello_c_gui
+        run: |
+        ./build.sh 
+        
 
         
       #- name: upload binary 
