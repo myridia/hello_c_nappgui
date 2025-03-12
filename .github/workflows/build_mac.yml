@@ -24,9 +24,9 @@ jobs:
           git clone --depth 1 https://github.com/frang75/nappgui_src.git
           cd nappgui_src
           cmake --version 
-       #cmake -G Xcode -S . -B build -DNAPPGUI_DEMO=NO
-       #   #cmake --build build --config Release -j 4
-       # cmake --install build --config Release --prefix /usr/local/nappgui
+          cmake -G Xcode -S . -B build -DNAPPGUI_DEMO=NO
+          cmake --build build --config Release -j 4
+          cmake --install build --config Release --prefix /usr/local/nappgui
           
        # name: Checkout repository
        #  uses: actions/checkout@v4
