@@ -26,3 +26,7 @@ git clone https://github.com/myridia/hello_c_nappgui.git
 cd hello_cmake_c
 ./build.sh
 ```
+
+## More Documentations
+* https://nappgui.com/en/guide/build.html
+* https://nappgui.com/en/start/quick.html
