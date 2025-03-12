@@ -45,14 +45,14 @@ jobs:
         
 
         
-      #- name: upload binary 
-      #  uses: svenstaro/upload-release-action@v2
-      #  with:
-      #    repo_token: ${{ secrets.GITHUB_TOKEN }}
-      #    file: 'helloc_linux'
-      #    tag: ${{ github.ref }}
-      #    overwrite: true
-      #    file_glob: true
+      - name: upload binary 
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: 'build/Release/bin/hello_c_nappgui'
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: true
 
 
           
