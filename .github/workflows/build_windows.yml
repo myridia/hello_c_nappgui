@@ -21,12 +21,15 @@ jobs:
     if: github.repository_owner == 'myridia'
     runs-on: windows-latest
     steps:
-      - name: build windows
+      - name: download nappgui_rs
         run: |
           git clone --depth 1 https://github.com/frang75/nappgui_src.git
-          #cmake -S . -B build -DNAPPGUI_DEMO=NO
-          #cmake --build build --config Release -j 4
-          #cmake --install build --config Release --prefix C:/nappgui
+          cd nappgui_src
+      - name: build and install nappgui
+        run: |
+          cmake -S . -B build -DNAPPGUI_DEMO=NO
+          cmake --build build --config Release -j 4
+          cmake --install build --config Release --prefix C:/nappgui
 
         
     
