@@ -1,4 +1,4 @@
-name: Windows
+name: build_indows
 
 on:
   push:
@@ -23,9 +23,10 @@ jobs:
     steps:
       - name: build windows
         run: |
-          cmake -S . -B build -DNAPPGUI_DEMO=NO
-          cmake --build build --config Release -j 4
-          cmake --install build --config Release --prefix C:/nappgui
+          git clone --depth 1 https://github.com/frang75/nappgui_src.git
+          #cmake -S . -B build -DNAPPGUI_DEMO=NO
+          #cmake --build build --config Release -j 4
+          #cmake --install build --config Release --prefix C:/nappgui
 
         
     
