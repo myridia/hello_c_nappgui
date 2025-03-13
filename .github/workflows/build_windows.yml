@@ -21,13 +21,11 @@ jobs:
     if: github.repository_owner == 'myridia'
     runs-on: windows-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-        
-
       - name: build windows
         run: |
-          python --version
+          cmake -S . -B build -DNAPPGUI_DEMO=NO
+          cmake --build build --config Release -j 4
+          cmake --install build --config Release --prefix C:/nappgui
 
         
     
