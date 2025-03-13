@@ -1,5 +1,5 @@
 
-name: Mac
+name: build_mac
 on:
   push:
     branches: ["main"]
@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   build_macos_intel:
-    if: github.repository_owner == 'myridia'
+    if: github.repository_owner == 'myridiax'
     runs-on: macos-13
     steps:
        - name: install nappgui 
