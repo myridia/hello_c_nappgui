@@ -40,7 +40,14 @@ jobs:
          ls build/Release/bin
         
 
-
+      - name: Upload release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: 'build/Release/bin/hello_c_nappgui.exe'
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: true  
         
 
 
