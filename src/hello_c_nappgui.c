@@ -29,8 +29,7 @@ static Panel *i_panel(App *app)
     Label *label = label_create();
     Button *button = button_push();
     TextView *text = textview_create();
-    app->text = text;
-    label_text(label, "Hello!, I'm a label");
+    label_text(label, "hello_c_nappgui, I'm a lable");
     button_text(button, "Click Me!");
     button_OnClick(button, listener(app, i_OnButton, App));
     layout_label(layout, label, 0, 0);
@@ -42,6 +41,7 @@ static Panel *i_panel(App *app)
     layout_vmargin(layout, 0, 5);
     layout_vmargin(layout, 1, 5);
     panel_layout(panel, layout);
+    app->text = text;
     return panel;
 }
 
@@ -62,7 +62,7 @@ static App *i_create(void)
     Panel *panel = i_panel(app);
     app->window = window_create(ekWINDOW_STD);
     window_panel(app->window, panel);
-    window_title(app->window, "Hello, World!");
+    window_title(app->window, "hello_c_nappgui");
     window_origin(app->window, v2df(500, 200));
     window_OnClose(app->window, listener(app, i_OnClose, App));
     window_show(app->window);
