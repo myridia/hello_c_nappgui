@@ -35,8 +35,8 @@ static Panel *i_panel(App *app)
     layout_label(layout, label, 0, 0);
     layout_button(layout, button, 0, 1);
     layout_textview(layout, text, 0, 2);
-    layout_hsize(layout, 0, 250);
-    layout_vsize(layout, 2, 100);
+    layout_hsize(layout, 0, 550);
+    layout_vsize(layout, 2, 200);
     layout_margin(layout, 5);
     layout_vmargin(layout, 0, 5);
     layout_vmargin(layout, 1, 5);
