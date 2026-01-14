@@ -17,7 +17,7 @@ permissions:
 jobs:
   build_macos_intel:
     if: github.repository_owner == 'myridia'
-    runs-on: macos-13
+    runs-on: macos-15
     steps:
        - name: install nappgui 
          run: |
@@ -33,7 +33,7 @@ jobs:
 
        - name: build hello_c_gui
          run: |
-           cmake -G Xcode -S . -B build -DCMAKE_INSTALL_PREFIX=/usr/local/nappgui
+           cmake -G Xcode -S . -B build -DCMAKE_INSTALL_PREFIX=/usr/local/nappgui -DCMAKE_POLICY_VERSION_MINIMUM=3.5 
            cmake --build build --config Release
            ls  build/Release/bin/
            ls build/Release/bin/hello_c_nappgui.app
