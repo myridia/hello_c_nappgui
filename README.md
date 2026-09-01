@@ -1,3 +1,5 @@
+<img src="hello_c_nappgui.svg" alt="hello_c_nappgui" width="120">
+
 ## Requirment
 
 ### Install nappgui lib
