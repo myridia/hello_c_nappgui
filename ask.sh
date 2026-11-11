@@ -9,6 +9,7 @@ show_menu() {
   printf "%s\n" '  │  1  │ Install NAppGUI - Windows (C:/nappgui)       │'
   printf "%s\n" '  │  2  │ Install NAppGUI - macOS (/usr/local/nappgui) │'
   printf "%s\n" '  │  3  │ Install NAppGUI - Linux (/usr/local/nappgui) │'
+  printf "%s\n" '  │  4  │ Build & run app (./build.sh)                 │'
   printf "%s\n" '  │  0  │ Exit                                         │'
   printf "%s\n" '  └─────┴──────────────────────────────────────────────┘'
 }
@@ -35,6 +36,9 @@ while true; do
   elif [ "$task" = "3" ]; then
     printf "  ...installing NAppGUI for Linux\n"
     "$SCRIPT_DIR/ask.d/install_nappgui_linux.sh"
+  elif [ "$task" = "4" ]; then
+    printf "  ...building and running the app\n"
+    "$SCRIPT_DIR/ask.d/build.sh"
   else
     printf "  Unknown task: %s\n" "$task"
   fi
