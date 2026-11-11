@@ -28,7 +28,7 @@ Which runs `cmake -B build -DNAPPGUI_DEMO=NO -DCMAKE_BUILD_TYPE=Release` then `c
 - `ask.sh` — task switch (menu); tasks live in `ask.d/`
 - `ask.d/install_nappgui_windows.sh` — task 1: clone `nappgui_src` (if missing), build, install to `C:/nappgui`
 - `ask.d/install_nappgui_macos.sh` — task 2: same, Xcode generator, prefix `/usr/local/nappgui`
-- `ask.d/install_nappgui_linux.sh` — task 3: same, Release build, prefix `/usr/local/nappgui`
+- `ask.d/install_nappgui_linux.sh` — task 3: installs `libgtk-3-dev` + `pkg-config` via apt if `gtk+-3.0` is missing, then same clone/build, `sudo` install to `/usr/local/nappgui`
 
 ## Conventions
 - No comments in code unless asked.
