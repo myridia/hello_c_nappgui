@@ -53,3 +53,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Local NAppGUI checkout cloned by ask.sh tasks
+nappgui_src/
