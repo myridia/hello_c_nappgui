@@ -25,6 +25,10 @@ Which runs `cmake -B build -DNAPPGUI_DEMO=NO -DCMAKE_BUILD_TYPE=Release` then `c
 - `src/CMakeLists.txt` — per-source CMake
 - `CMakeLists.txt` — top-level NAppGUI project definition
 - `build.sh` — configure, build and run
+- `ask.sh` — task switch (menu); tasks live in `ask.d/`
+- `ask.d/install_nappgui_windows.sh` — task 1: clone `nappgui_src` (if missing), build, install to `C:/nappgui`
+- `ask.d/install_nappgui_macos.sh` — task 2: same, Xcode generator, prefix `/usr/local/nappgui`
+- `ask.d/install_nappgui_linux.sh` — task 3: same, Release build, prefix `/usr/local/nappgui`
 
 ## Conventions
 - No comments in code unless asked.
